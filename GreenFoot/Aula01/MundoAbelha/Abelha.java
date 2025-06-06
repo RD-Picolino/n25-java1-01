@@ -22,5 +22,47 @@ public class Abelha extends Actor
         if (Greenfoot.isKeyDown("D")){
             turn(5);            
         }
+        verificarPosicao();
+    }
+    /**
+     * Método que verifica a posição da Abelha.
+     */
+    public void verificarPosicao(){
+        if(estaNoTopo()){
+            setLocation(getX(), getWorld().getHeight()-10);
+        }
+        if (estaNaBase()){
+            setLocation(getX(), 10);
+        }
+        if (estaNaEsquerda()){
+            setLocation(getWorld().getWidth()-10, getY());
+        }
+        if (estaNaDireita()){
+            setLocation(getY(), 10);
+        }
+    }
+    /**
+     * Método que verifica se a abelha está no topo.
+     */
+    public boolean estaNoTopo(){
+      return getY()<10;
+    }
+    /**
+     * Método que verifica se a abelha está na base.
+     */
+    public boolean estaNaBase(){
+        return getY()>getWorld().getHeight()-10;
+    }
+    /**
+     * Método que verifica se a abelha está na esquerda.
+     */
+    public boolean estaNaEsquerda(){
+        return getX()<10;
+    }
+    /**
+     * Método que verifica se a abelha está na direita.
+     */
+    public boolean estaNaDireita(){
+        return getX()>getWorld().getWidth()-10;
     }
 }
