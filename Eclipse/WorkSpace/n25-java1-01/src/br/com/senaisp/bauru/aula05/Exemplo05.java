@@ -11,9 +11,13 @@ public class Exemplo05 {
 		int vlr = sc.nextInt();
 		switch(vlr) {
 		case 1: System.out.println("Você ganhou uma caneta!");
+		break;
 		case 2:System.out.println("Você ganhou um lápis!");
+		break;
 		case 3:System.out.println("Você ganhou uma borracha!");
+		break;
 		case 4:System.out.println("Você ganhou um bombom!");
+		break;
 		case 5:System.out.println("Você ganhou uma bala!");
 		break;
 		case 6:System.out.println("Você leu o que está sendo pedido?");
